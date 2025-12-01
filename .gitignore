@@ -1,0 +1,9 @@
+.idea/
+input_data/datasets/
+input_data/gzip.zip
+# IDE files
+.idea/
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
