@@ -96,3 +96,10 @@ handwriting-recognition/
 ├── README.md
 ├── .gitignore
 └── .env.example                  # 🆕 Environment variables
+
+
+
+preprocessor = ImagePreprocessor()
+image_paths = ["img1.png", "img2.png", "img3.png"]
+batch = preprocessor.preprocess_batch(image_paths)  # Shape: (3, 28, 28, 1)
+predictions = model.predict(batch)
