@@ -15,7 +15,7 @@ from collections import defaultdict
 class LetterPredictor:
     """Handles model loading and letter predictions."""
 
-    def __init__(self, model_path='../models/saved/simple_model_preprocessed.keras'):
+    def __init__(self, model_path='../models/saved/vggnet_model_combined.keras'):
         self.model = models.load_model(model_path)
         # Mapping: index to letter (adjust if your model uses different mapping)
         self.index_to_letter = {i: chr(i + ord('A')) for i in range(26)}
@@ -178,8 +178,8 @@ def print_top3_predictions(results):
 
 def main():
     # Configuration
-    folder_path = '../input_data/onenote_raw'
-    model_path = '../models/saved/simple_model_preprocessed.keras'
+    folder_path = '../input_data/onenote_raw/test'
+    model_path = '../models/saved/vggnet_model_combined.keras'
 
     print(f"Loading model from: {model_path}")
     predictor = LetterPredictor(model_path)
